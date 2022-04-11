@@ -54,6 +54,9 @@ dependencies {
     implementation Libs.rxJava
     implementation Libs.rxRelay
     implementation Libs.rxAndroid
+    implementation Libs.retrofit
+    implementation Libs.okHttp
+    implementation Libs.retrofitRxAdapter
 
     // Dependencies for local unit tests
     testImplementation Libs.junit

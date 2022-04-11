@@ -20,6 +20,9 @@ object Libs {
     const val androidKtx = "androidx.core:core-ktx:${Versions.androidCore}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompact}"
     const val materialDesign = "com.google.android.material:material:${Versions.material}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val okHttp = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
+    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 
 
     const val androidJunitTest = "androidx.test.ext:junit:${Versions.androidTestJunit}"
@@ -29,6 +32,11 @@ object Libs {
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     const val rxRelay = "com.jakewharton.rxrelay2:rxrelay:${Versions.rxAndroid}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
+    const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
+    const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+
+
+    const val javaxInject = "javax.inject:javax.inject:1"
 
     // Instrumentation tests
     const val junit = "junit:junit:${Versions.jUnit}"

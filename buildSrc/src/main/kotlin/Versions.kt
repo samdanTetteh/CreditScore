@@ -27,6 +27,10 @@ object Versions {
     const val rxJava = "2.2.14"
     const val rxAndroid = "2.1.1"
 
+    // Remote
+    const val retrofit = "2.9.0"
+    const val okHttp = "4.9.3"
+
 
     // Junit
     const val jUnit = "4.13.2"
