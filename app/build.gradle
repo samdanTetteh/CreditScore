@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -52,12 +53,17 @@ dependencies {
     implementation Libs.materialDesign
     implementation Libs.androidHilt
 
+    implementation Libs.navigationFragmentKtx
+    implementation Libs.navigationUIKtx
+
     implementation Libs.retrofit
     implementation Libs.okHttp
     implementation Libs.retrofitRxAdapter
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Dependencies for local unit tests
     testImplementation Libs.junit
+    testImplementation Libs.navigationTesting
 
     kapt  Libs.hiltAndroidCompiler
 
@@ -66,4 +72,5 @@ dependencies {
     androidTestImplementation Libs.espressoTest
     kaptAndroidTest  Libs.hiltAndroidCompiler
     androidTestImplementation Libs.hiltTesting
+    androidTestImplementation Libs.navigationTesting
 }

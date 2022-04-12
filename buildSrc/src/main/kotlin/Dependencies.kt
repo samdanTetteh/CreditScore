@@ -9,6 +9,7 @@ object BuildPlugins {
     const val androidKotlin = "org.jetbrains.kotlin.android:${Versions.kotlin}"
     const val kotlinJvm = "org.jetbrains.kotlin.jvm:${Versions.kotlin}"
     const val hiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.daggerHilt}"
+    const val navSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 }
 
 /**
@@ -35,6 +36,9 @@ object Libs {
     const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
 
+    const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+
 
     const val javaxInject = "javax.inject:javax.inject:1"
 
@@ -43,4 +47,5 @@ object Libs {
     const val espressoTest = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     const val hiltTesting  = "com.google.dagger:hilt-android-testing:${Versions.daggerHilt}"
     const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.daggerHilt}"
+    const val navigationTesting = "androidx.navigation:navigation-testing:${Versions.navigation}"
 }
