@@ -4,7 +4,7 @@ import com.ijikod.data.GetCreditScoreRepositoryImpl
 import com.ijikod.data.api.CreditScoreApi
 import com.ijikod.domain.repository.GetCreditScoreRepository
 import com.ijikod.mycreditscore.BuildConfig
-import com.ijikod.mycreditscore.common.BASE_URL
+import com.ijikod.presentation.common.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -50,7 +50,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit) = retrofit.create(CreditScoreApi::class.java)
+    fun provideApiService(retrofit: Retrofit): CreditScoreApi = retrofit.create(CreditScoreApi::class.java)
 
     @Provides
     @Singleton

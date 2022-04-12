@@ -1,4 +1,4 @@
-package com.ijikod.mycreditscore.common
+package com.ijikod.presentation.common
 
 import androidx.lifecycle.*
 import io.reactivex.disposables.CompositeDisposable

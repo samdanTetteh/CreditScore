@@ -46,14 +46,12 @@ dependencies {
 
     implementation project(path: ':domain')
     implementation project(path: ':data')
+    implementation project(path: ':presentation')
 
-    implementation Libs.androidKtx
     implementation Libs.appCompat
     implementation Libs.materialDesign
     implementation Libs.androidHilt
-    implementation Libs.rxJava
-    implementation Libs.rxRelay
-    implementation Libs.rxAndroid
+
     implementation Libs.retrofit
     implementation Libs.okHttp
     implementation Libs.retrofitRxAdapter
