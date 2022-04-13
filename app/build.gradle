@@ -3,8 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -30,6 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -41,13 +42,24 @@ android {
             arg("dagger.hilt.shareTestComponents", "true")
         }
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+kapt {
+    arguments {
+        // Make Hilt share the same definition of Components in tests instead of
+        // creating a new set of Components per test class.
+        arg("dagger.hilt.shareTestComponents", "true")
+    }
 }
 
 dependencies {
 
     implementation project(path: ':domain')
     implementation project(path: ':data')
-    implementation project(path: ':presentation')
 
     implementation Libs.appCompat
     implementation Libs.materialDesign
@@ -55,11 +67,18 @@ dependencies {
 
     implementation Libs.navigationFragmentKtx
     implementation Libs.navigationUIKtx
+    implementation Libs.fragment
+    implementation Libs.lifeCycle
+
+    implementation Libs.rxJava
+    implementation Libs.rxRelay
+    implementation Libs.rxAndroid
+    implementation Libs.androidKtx
+    implementation Libs.androidHilt
 
     implementation Libs.retrofit
     implementation Libs.okHttp
     implementation Libs.retrofitRxAdapter
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Dependencies for local unit tests
     testImplementation Libs.junit
@@ -68,9 +87,9 @@ dependencies {
     kapt  Libs.hiltAndroidCompiler
 
     // Instrumentation Tests
+    debugImplementation Libs.fragmentTesting
     androidTestImplementation Libs.androidJunitTest
     androidTestImplementation Libs.espressoTest
-    kaptAndroidTest  Libs.hiltAndroidCompiler
-    androidTestImplementation Libs.hiltTesting
     androidTestImplementation Libs.navigationTesting
+    androidTestImplementation Libs.hiltTesting
 }

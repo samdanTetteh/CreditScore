@@ -1,4 +1,4 @@
-package com.ijikod.presentation.common
+package com.ijikod.mycreditscore.common
 
 import android.util.Log
 import io.reactivex.Completable

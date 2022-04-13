@@ -24,10 +24,15 @@ object Libs {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val okHttp = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
     const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val lifeCycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycle}"
+    const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragmentX}"
 
 
     const val androidJunitTest = "androidx.test.ext:junit:${Versions.androidTestJunit}"
 
+    /**
+     * HILT
+     */
     const val androidHilt = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
 
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
@@ -39,13 +44,13 @@ object Libs {
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
-
     const val javaxInject = "javax.inject:javax.inject:1"
 
     // Instrumentation tests
     const val junit = "junit:junit:${Versions.jUnit}"
     const val espressoTest = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val navigationTesting = "androidx.navigation:navigation-testing:${Versions.navigation}"
     const val hiltTesting  = "com.google.dagger:hilt-android-testing:${Versions.daggerHilt}"
     const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.daggerHilt}"
-    const val navigationTesting = "androidx.navigation:navigation-testing:${Versions.navigation}"
+    const val fragmentTesting ="androidx.fragment:fragment-testing:${Versions.fragmentX}"
 }

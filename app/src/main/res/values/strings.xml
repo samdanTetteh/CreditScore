@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">MyCreditScore</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Credit Score</string>
+
+
+    <string name="error_txt">Oops! something must have gone wrong.</string>
+    <string name="retry_txt">Retry</string>
 </resources>

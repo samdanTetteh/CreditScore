@@ -4,7 +4,7 @@ import com.ijikod.data.GetCreditScoreRepositoryImpl
 import com.ijikod.data.api.CreditScoreApi
 import com.ijikod.domain.repository.GetCreditScoreRepository
 import com.ijikod.mycreditscore.BuildConfig
-import com.ijikod.presentation.common.BASE_URL
+import com.ijikod.mycreditscore.common.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,5 +1,7 @@
+package com.ijikod.mycreditscore.creditScore.states
+
 import com.ijikod.domain.entity.CreditScore
-import com.ijikod.presentation.common.AsyncResult
+import com.ijikod.mycreditscore.common.AsyncResult
 
 data class CreditScoreStates(
     val creditScore: AsyncResult<CreditScore>? = null

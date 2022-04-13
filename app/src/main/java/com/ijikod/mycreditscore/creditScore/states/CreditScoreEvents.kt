@@ -1,6 +1,4 @@
-package com.ijikod.presentation.states
-
-import CreditScoreStates
+package com.ijikod.mycreditscore.creditScore.states
 
 sealed class CreditScoreEvents {
     object Loading: CreditScoreEvents()

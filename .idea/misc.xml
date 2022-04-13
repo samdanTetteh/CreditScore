@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_credit_score.xml" value="0.2631578947368421" />
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>

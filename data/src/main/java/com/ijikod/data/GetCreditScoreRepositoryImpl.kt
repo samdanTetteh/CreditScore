@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class GetCreditScoreRepositoryImpl @Inject constructor(
             private val remote: CreditScoreApi
-) : GetCreditScoreRepository {
+): GetCreditScoreRepository {
 
     override fun getCreditScore(): Observable<CreditScore> {
         return remote.getCreditScore().toObservable().map { it.toDomain() }

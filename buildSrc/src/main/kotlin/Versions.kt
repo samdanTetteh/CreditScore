@@ -14,6 +14,8 @@ object Versions {
     const val androidXTestExtKotlinRunnerVersion = "1.1.2"
     const val archCoreTesting = "2.1.0"
     const val navigation = "2.3.5"
+    const val lifeCycle = "2.2.0"
+    const val fragmentX = "1.4.0"
 
 
     // Dagger Hilt
