@@ -46,6 +46,8 @@ Please find below more details...
 - Go further with modularising the application
 - Include offline support
 - Automatically retry endpoint once network is restored
+- Avoid credit Score fragment from reloading
+- Improve credit score detail screen UI (could be a card view with a recycler view) 
 
 # Issues faced
 - Has issues with donut view as I wanted to avoid using libraries.
