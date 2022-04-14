@@ -53,4 +53,13 @@ object Libs {
     const val hiltTesting  = "com.google.dagger:hilt-android-testing:${Versions.daggerHilt}"
     const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.daggerHilt}"
     const val fragmentTesting ="androidx.fragment:fragment-testing:${Versions.fragmentX}"
+    const val androidxTestRunner = "androidx.test:runner:${Versions.coreAndroidxTesting}"
+    const val androidTestCore = "androidx.test:core-ktx:${Versions.androidxCoreTest}"
+    const val espressoIdleResource = "androidx.test.espresso:espresso-idling-resource:${Versions.espressoCore}"
+    const val espressoIntents = "androidx.test.espresso:espresso-intents:${Versions.espressoCore}"
+    const val espressoTestContrib = "androidx.test.espresso:espresso-contrib:${Versions.espressoCore}"
+    const val androidArchCoreTesting = "androidx.arch.core:core-testing:${Versions.archCoreTesting}"
+    const val androidxTestRules = "androidx.test:rules:${Versions.coreAndroidxTesting}"
+    const val androidxTestCore = "androidx.test:core:${Versions.coreAndroidxTesting}"
+    const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
 }

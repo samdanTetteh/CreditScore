@@ -29,6 +29,7 @@ object Versions {
     // Libraries
     const val rxJava = "2.2.14"
     const val rxAndroid = "2.1.1"
+    const val googleTruth = "1.1.3"
 
     // Remote
     const val retrofit = "2.9.0"
