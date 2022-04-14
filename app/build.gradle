@@ -17,7 +17,8 @@ android {
         versionCode ConfigData.versionCode
         versionName ConfigData.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.ijikod.dog_friendly.CustomTestRunner"
     }
 
     buildTypes {
