@@ -44,7 +44,7 @@ class CreditScoreFragment : Fragment() {
 
                 when (event) {
 
-                    is CreditScoreEvents.Loading -> binding.loadingProgress.isVisible
+                    is CreditScoreEvents.Loading -> binding.loadingProgress.isVisible = true
 
 
                     is CreditScoreEvents.Error -> {
