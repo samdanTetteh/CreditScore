@@ -51,6 +51,68 @@
     </RelativeLayout>
 
 
+    <ProgressBar
+        android:id="@+id/score_donut_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/progress_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:max="700"
+        tools:progress="700"
+        tools:secondaryProgress="320"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/score_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/score_donut_view"
+        app:layout_constraintEnd_toEndOf="@+id/score_donut_view"
+        app:layout_constraintStart_toStartOf="@+id/score_donut_view"
+        app:layout_constraintTop_toTopOf="@+id/score_donut_view">
+
+        <TextView
+            android:id="@+id/your_score_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/your_score_is_txt"
+            android:text="@string/your_score_is_txt"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:id="@+id/score_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/score"
+            tools:text="320"
+            android:layout_marginTop="5dp"
+            android:textSize="50sp"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:id="@+id/out_of_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="out of 700"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+
 
 
 

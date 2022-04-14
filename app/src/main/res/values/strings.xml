@@ -4,4 +4,7 @@
 
     <string name="error_txt">Oops! something must have gone wrong.</string>
     <string name="retry_txt">Retry</string>
+
+    <string name="your_score_is_txt">Your credit score is</string>
+    <string name="out_of_txt">out of %1$d</string>
 </resources>

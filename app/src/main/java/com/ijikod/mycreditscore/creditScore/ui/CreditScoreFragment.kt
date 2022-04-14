@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import com.ijikod.mycreditscore.R
 import com.ijikod.mycreditscore.databinding.FragmentCreditScoreBinding
 import com.ijikod.mycreditscore.common.AutoCompositeDisposable
 import com.ijikod.mycreditscore.common.addTo
@@ -48,10 +49,26 @@ class CreditScoreFragment : Fragment() {
 
                     is CreditScoreEvents.Error -> {
                         binding.loadingProgress.isVisible = false
+                        binding.scoreDonutView.isVisible = false
+                        binding.scoreHolder.isVisible = false
                         binding.errorView.isVisible = true
                         binding.errorTxt.text = event.error.message
                         binding.retryBtn.setOnClickListener {
                             viewModel.getMyCreditScore()
+                        }
+                    }
+
+                    is CreditScoreEvents.ShowCreditScore -> {
+                        binding.loadingProgress.isVisible = false
+                        binding.errorView.isVisible = false
+                        binding.scoreDonutView.isVisible = true
+                        binding.scoreHolder.isVisible = true
+                        event.state.getCreditScore?.let { creditScoreInfo ->
+                            binding.scoreDonutView.max = creditScoreInfo.maxScoreValue
+                            binding.scoreDonutView.progress = creditScoreInfo.maxScoreValue
+                            binding.scoreDonutView.secondaryProgress = creditScoreInfo.score
+                            binding.scoreTxt.text = creditScoreInfo.score.toString()
+                            binding.outOfTxt.text = getString(R.string.out_of_txt, creditScoreInfo.maxScoreValue)
                         }
                     }
 
