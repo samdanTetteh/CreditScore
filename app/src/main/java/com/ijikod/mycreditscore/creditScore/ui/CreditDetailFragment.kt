@@ -42,7 +42,7 @@ class CreditDetailFragment : Fragment() {
             binding.clientRefTxt.text = getString(R.string.client_ref, clientRef)
             binding.defaultedTxt.text = getString(R.string.defaulted, defaultedStatus)
             binding.creditUsedTxt.text = getString(R.string.percentageCreditUsed, creditUsed)
-            binding.scoreTxt.text = getString(R.string.creditScoreTxt, creditScore)
+            binding.detailScoreTxt.text = getString(R.string.creditScoreTxt, creditScore)
         }
     }
 }
