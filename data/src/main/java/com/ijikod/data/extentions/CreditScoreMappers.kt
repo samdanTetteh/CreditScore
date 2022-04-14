@@ -13,6 +13,9 @@ fun CreditScoreContract.CreditScoreResponse.toDomain(): CreditScore {
 fun CreditScoreContract.CreditReportInfoResponse.toDomain(): CreditReportInfo {
     return CreditReportInfo(
         score = this.score.toInt(),
-        maxScoreValue = this.maxScoreValue.toInt()
+        maxScoreValue = this.maxScoreValue.toInt(),
+        clientRef = this.clientRef,
+        hasEverDefaulted = this.hasEverDefaulted,
+        percentageCreditUsed = this.percentageCreditUsed.toInt()
     )
 }

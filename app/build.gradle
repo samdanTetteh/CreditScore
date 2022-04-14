@@ -119,6 +119,7 @@ dependencies {
     implementation Libs.retrofit
     implementation Libs.okHttp
     implementation Libs.retrofitRxAdapter
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Dependencies for local unit tests
     testImplementation Libs.junit

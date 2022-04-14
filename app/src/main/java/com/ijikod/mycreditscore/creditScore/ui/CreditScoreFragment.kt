@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.ijikod.mycreditscore.R
 import com.ijikod.mycreditscore.databinding.FragmentCreditScoreBinding
 import com.ijikod.mycreditscore.common.AutoCompositeDisposable
@@ -69,6 +70,16 @@ class CreditScoreFragment : Fragment() {
                             binding.scoreDonutView.secondaryProgress = creditScoreInfo.score
                             binding.scoreTxt.text = creditScoreInfo.score.toString()
                             binding.outOfTxt.text = getString(R.string.out_of_txt, creditScoreInfo.maxScoreValue)
+
+                            binding.scoreDonutView.setOnClickListener {
+                                val creditScoreData = "${creditScoreInfo.score} / ${creditScoreInfo.maxScoreValue}"
+                                val detailsNavAction = CreditScoreFragmentDirections.
+                                actionCreditScoreToCreditDetailFragment(creditScoreInfo.clientRef,
+                                    creditScoreInfo.hasEverDefaulted,creditScoreInfo.percentageCreditUsed.toString(),
+                                creditScoreData)
+
+                                findNavController().navigate(detailsNavAction)
+                            }
                         }
                     }
 

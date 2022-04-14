@@ -7,4 +7,10 @@
 
     <string name="your_score_is_txt">Your credit score is</string>
     <string name="out_of_txt">out of %1$d</string>
+
+    <string name="client_ref">Client Ref: %1$s</string>
+    <string name="defaulted">Ever Defaulted: %1$b</string>
+    <string name="percentageCreditUsed">Percentage Credit Used: %1$s</string>
+    <string name="fragment_detail_label">Credit Score Details</string>
+    <string name="creditScoreTxt">Credit Score: %1$s</string>
 </resources>
