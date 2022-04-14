@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.ijikod.mycreditscore.databinding.FragmentCreditScoreBinding
 import com.ijikod.mycreditscore.common.AutoCompositeDisposable
+import com.ijikod.mycreditscore.common.addTo
 import com.ijikod.mycreditscore.creditScore.CreditScoreViewModel
+import com.ijikod.mycreditscore.creditScore.states.CreditScoreEvents
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,5 +37,26 @@ class CreditScoreFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getMyCreditScore()
+
+        viewModel.events()
+            .subscribe { event ->
+
+                when (event) {
+
+                    is CreditScoreEvents.Loading -> binding.loadingProgress.isVisible
+
+
+                    is CreditScoreEvents.Error -> {
+                        binding.loadingProgress.isVisible = false
+                        binding.errorView.isVisible = true
+                        binding.errorTxt.text = event.error.message
+                        binding.retryBtn.setOnClickListener {
+                            viewModel.getMyCreditScore()
+                        }
+                    }
+
+
+                }
+            }.addTo(disposable)
     }
 }
