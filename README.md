@@ -28,9 +28,9 @@ Please find below more details...
 - Type safe dependency management (with [Kotlin DSL](https://kotlinlang.org/docs/type-safe-builders.html))
 - Android architecture components to share ViewModels during configuration changes
 
-| Normal | Dark Theme |
+| Light Theme | Dark Theme |
 |----------------------------| --------------------------- |
-| - | - | 
+| <img src="images/light.png" alt="light-theme"/> | <img src="images/dark.png" alt="dark-theme"/> | 
 
 # Getting started
 
@@ -42,8 +42,10 @@ Please find below more details...
 # Future Improvements
 - Implement composable UI with donut view.
 - Add more instrumentation tests to support data states
+- Add more unit tests as well
 - Go further with modularising the application
 - Include offline support
+- Automatically retry endpoint once network is restored
 
 # Issues faced
 - Has issues with donut view as I wanted to avoid using libraries.
